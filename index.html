@@ -1132,69 +1132,45 @@
             </div>
           </div>
 
-          <!-- Volunteer Inquiry Form -->
+          <!-- Volunteer Facebook Connect Card -->
           <div class="volunteer-form-col">
-            <div class="form-card">
-              <h3 class="form-card-title">Volunteer Application / Interest</h3>
-              <p class="form-card-subtitle">Fill out this quick form and an officer from Middlefork Fire will contact you to discuss opportunities and invite you to our next station drill.</p>
-              
-              <form id="volunteerForm" class="styled-form" novalidate>
-                <div class="form-row">
-                  <div class="form-group">
-                    <label for="volFullName">Full Name <span class="required">*</span></label>
-                    <input type="text" id="volFullName" name="fullName" placeholder="e.g. John Miller" required>
+            <div class="volunteer-connect-card">
+              <div class="volunteer-connect-badge">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true">
+                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                </svg>
+                Direct Message Us
+              </div>
+              <h3 class="form-card-title">Message Our Department</h3>
+              <p class="form-card-subtitle">
+                Interested in volunteering or learning more about our department? The fastest way to get in touch with our team, ask questions, or find out about our next training drill is to send us a message on Facebook.
+              </p>
+
+              <a href="https://www.facebook.com/MiddleforkFireandRescue" target="_blank" rel="noopener noreferrer" class="btn btn-facebook btn-block btn-lg" id="facebookVolunteerBtn">
+                <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                </svg>
+                Message Our Department on Facebook
+              </a>
+
+              <div class="volunteer-connect-meta">
+                <div class="volunteer-connect-item">
+                  <svg class="volunteer-connect-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                  </svg>
+                  <div>
+                    <strong>Visit Us In Person:</strong>
+                    <span>Station Headquarters &bull; 9219 Campton Road, Slade, KY 40376</span>
                   </div>
-                  <div class="form-group">
-                    <label for="volAge">Age <span class="required">*</span></label>
-                    <input type="number" id="volAge" name="age" min="16" max="85" placeholder="e.g. 25" required>
+                </div>
+                <div class="volunteer-connect-item">
+                  <svg class="volunteer-connect-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                  </svg>
+                  <div>
+                    <strong>Station Office Phone:</strong>
+                    <a href="tel:6066639232">(606) 663-9232</a>
                   </div>
-                </div>
-
-                <div class="form-row">
-                  <div class="form-group">
-                    <label for="volPhone">Phone Number <span class="required">*</span></label>
-                    <input type="tel" id="volPhone" name="phone" placeholder="(606) 555-0123" required>
-                  </div>
-                  <div class="form-group">
-                    <label for="volEmail">Email Address <span class="required">*</span></label>
-                    <input type="email" id="volEmail" name="email" placeholder="john@example.com" required>
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label for="volAddress">Physical Address / Community <span class="required">*</span></label>
-                  <input type="text" id="volAddress" name="address" placeholder="e.g. Campton Rd, Slade, KY" required>
-                </div>
-
-                <div class="form-group">
-                  <label for="volInterest">Primary Interest Area</label>
-                  <select id="volInterest" name="interest">
-                    <option value="firefighter">Active Firefighter (Structural / Wildland)</option>
-                    <option value="driver">Driver / Apparatus Operator</option>
-                    <option value="rescue_sar">Rescue Technician / SAR Support</option>
-                    <option value="medical">Medical First Responder / EMS</option>
-                    <option value="support">Station Support, Auxiliary &amp; Rehab</option>
-                    <option value="junior">Junior Firefighter (Ages 16-17)</option>
-                  </select>
-                </div>
-
-                <div class="form-group">
-                  <label for="volExperience">Prior Experience (None Required)</label>
-                  <textarea id="volExperience" name="experience" rows="3" placeholder="Tell us if you have any fire, EMS, military, trades, CDL, outdoor, or medical experience (optional)."></textarea>
-                </div>
-
-                <button type="submit" class="btn btn-accent btn-block btn-lg" id="submitVolunteerBtn">
-                  Submit Volunteer Interest
-                </button>
-                <p class="form-privacy-note">We respect your privacy. Your information is only used by Middlefork Volunteer Fire/Rescue leadership to contact you regarding volunteer membership.</p>
-              </form>
-
-              <!-- Success Alert Message (Hidden by default) -->
-              <div class="form-success-alert" id="volunteerSuccessAlert" style="display: none;" role="alert">
-                <div class="success-icon">&check;</div>
-                <div class="success-content">
-                  <h4>Thank You for Stepping Up!</h4>
-                  <p>Your volunteer application interest has been recorded. An officer from Middlefork Fire will contact you soon. You are also welcome to visit us during department training at 9219 Campton Road, Slade, KY.</p>
                 </div>
               </div>
             </div>
@@ -1330,65 +1306,6 @@
                 <p><strong>Chief of Department:</strong> Robert Campbell</p>
                 <p><strong>Dispatch Center:</strong> Powell County 911 Dispatch Center</p>
                 <p><strong>Affiliation:</strong> Powell County Fire Department</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Non-Emergency General Inquiry Message Form -->
-          <div class="contact-form-col">
-            <div class="form-card">
-              <h3 class="form-card-title">Send a Non-Emergency Message</h3>
-              <p class="form-card-subtitle">Use this form for non-emergency inquiries, smoke detector assistance, school event scheduling, or questions about burn laws.</p>
-              
-              <div class="warning-callout">
-                <strong>Notice:</strong> Do NOT use this online form to report an active fire, medical emergency, or ongoing accident. Call <strong>911</strong> immediately.
-              </div>
-
-              <form id="contactForm" class="styled-form" novalidate>
-                <div class="form-group">
-                  <label for="contactName">Your Name <span class="required">*</span></label>
-                  <input type="text" id="contactName" name="name" placeholder="First and Last Name" required>
-                </div>
-
-                <div class="form-row">
-                  <div class="form-group">
-                    <label for="contactEmail">Email Address <span class="required">*</span></label>
-                    <input type="email" id="contactEmail" name="email" placeholder="you@example.com" required>
-                  </div>
-                  <div class="form-group">
-                    <label for="contactPhone">Phone Number</label>
-                    <input type="tel" id="contactPhone" name="phone" placeholder="(606) 555-0199">
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label for="contactSubject">Subject / Topic</label>
-                  <select id="contactSubject" name="subject">
-                    <option value="burn_laws">Question About Kentucky Burn Laws</option>
-                    <option value="smoke_detector">Request Smoke Alarm / Fire Safety Help</option>
-                    <option value="school_community">School / Community Event Request</option>
-                    <option value="donation">Donation / Equipment Support</option>
-                    <option value="station">General Station Inquiry</option>
-                  </select>
-                </div>
-
-                <div class="form-group">
-                  <label for="contactMessage">Message / Request Details <span class="required">*</span></label>
-                  <textarea id="contactMessage" name="message" rows="4" placeholder="How can our volunteer department assist you?" required></textarea>
-                </div>
-
-                <button type="submit" class="btn btn-primary btn-block btn-lg" id="submitContactBtn">
-                  Send Message
-                </button>
-              </form>
-
-              <!-- Success alert for contact form -->
-              <div class="form-success-alert" id="contactSuccessAlert" style="display: none;" role="alert">
-                <div class="success-icon">&check;</div>
-                <div class="success-content">
-                  <h4>Message Sent Successfully</h4>
-                  <p>Thank you for reaching out to Middlefork Fire/Rescue. A department representative will review your non-emergency inquiry and follow up shortly.</p>
-                </div>
               </div>
             </div>
           </div>

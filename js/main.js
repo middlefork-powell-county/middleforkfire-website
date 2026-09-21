@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initMobileNavigation();
   initHeaderScrollEffect();
   initApparatusFilter();
-  initVolunteerForm();
   initContactForm();
   initCopyAddress();
   initBurnLawModal();
@@ -213,50 +212,7 @@ function initApparatusFilter() {
 }
 
 /**
- * 5. Volunteer Application / Interest Form Validation & Submission
- */
-function initVolunteerForm() {
-  const form = document.getElementById('volunteerForm');
-  const successAlert = document.getElementById('volunteerSuccessAlert');
-  const submitBtn = document.getElementById('submitVolunteerBtn');
-
-  if (!form) return;
-
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    const fullName = document.getElementById('volFullName').value.trim();
-    const age = parseInt(document.getElementById('volAge').value, 10);
-    const phone = document.getElementById('volPhone').value.trim();
-    const email = document.getElementById('volEmail').value.trim();
-    const address = document.getElementById('volAddress').value.trim();
-
-    if (!fullName || !phone || !email || !address) {
-      alert('Please fill out all required fields (Name, Age, Phone, Email, Address).');
-      return;
-    }
-
-    if (isNaN(age) || age < 16) {
-      alert('Volunteer applicants must be at least 16 years of age for our junior firefighter program, or 18+ for active adult membership.');
-      return;
-    }
-
-    // Simulate submission state
-    submitBtn.disabled = true;
-    submitBtn.textContent = 'Recording Volunteer Interest...';
-
-    setTimeout(() => {
-      form.style.display = 'none';
-      if (successAlert) {
-        successAlert.style.display = 'flex';
-        successAlert.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      }
-    }, 700);
-  });
-}
-
-/**
- * 6. Non-Emergency Contact Form
+ * 5. Non-Emergency Contact Form
  */
 function initContactForm() {
   const form = document.getElementById('contactForm');
