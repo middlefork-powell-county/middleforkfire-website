@@ -1,5 +1,5 @@
 /**
- * Middlefork Volunteer Fire and Rescue (Station 874)
+ * Middlefork Volunteer Fire and Rescue
  * Powell County, Kentucky • Official Website Scripts
  */
 
